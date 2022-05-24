@@ -1,0 +1,282 @@
+fileFormatVersion: 2
+guid: 48bd6b9b47749b14e8f04d7f5e3cd989
+ModelImporter:
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      74: -4567562055242918198
+    second: volpe|Banco|Take 001|BaseLayer
+  - first:
+      74: 10285592411214116
+    second: volpe|Barra|Take 001|BaseLayer
+  - first:
+      74: 2888249581371869002
+    second: volpe|Base_Cadeira.001|Take 001|BaseLayer
+  - first:
+      74: -7333706546174120672
+    second: volpe|Base_Cadeira001|Take 001|BaseLayer
+  - first:
+      74: 6316450224286748676
+    second: volpe|Base_Cadeira|Take 001|BaseLayer
+  - first:
+      74: -74545479178130612
+    second: volpe|Base_Container|Take 001|BaseLayer
+  - first:
+      74: -5248995872511071259
+    second: volpe|Base_Donut|Take 001|BaseLayer
+  - first:
+      74: 370625158402869343
+    second: volpe|Base|Take 001|BaseLayer
+  - first:
+      74: -6760658925488134871
+    second: volpe|Big_Donut|Take 001|BaseLayer
+  - first:
+      74: 8794340744405953190
+    second: volpe|Cadeira_Dir|Take 001|BaseLayer
+  - first:
+      74: -7606920465740583248
+    second: volpe|Cadeira_Esq|Take 001|BaseLayer
+  - first:
+      74: -8575590767709279504
+    second: volpe|Caixa_teto|Take 001|BaseLayer
+  - first:
+      74: 6860135035756162490
+    second: volpe|Camera.Target|Take 001|BaseLayer
+  - first:
+      74: -241398347369828644
+    second: volpe|Camera|Take 001|BaseLayer
+  - first:
+      74: -4056270688217285391
+    second: volpe|Cano|Take 001|BaseLayer
+  - first:
+      74: -3196534270582237982
+    second: volpe|Chao|Take 001|BaseLayer
+  - first:
+      74: 636757435897028171
+    second: volpe|Container_de_Lixo|Take 001|BaseLayer
+  - first:
+      74: -4858120507386992042
+    second: volpe|Dir_Container|Take 001|BaseLayer
+  - first:
+      74: 1464165111540427476
+    second: volpe|Donut|Take 001|BaseLayer
+  - first:
+      74: 8847146683342392612
+    second: volpe|Esq_Container|Take 001|BaseLayer
+  - first:
+      74: 7495617415373586846
+    second: volpe|Group001|Take 001|BaseLayer
+  - first:
+      74: -4080537487998099790
+    second: "volpe|Ilumina\xE7\xE3o.Target|Take 001|BaseLayer"
+  - first:
+      74: -8366950410070931859
+    second: "volpe|Ilumina\xE7\xE3o|Take 001|BaseLayer"
+  - first:
+      74: 2538807384371021828
+    second: volpe|Janelas_Base|Take 001|BaseLayer
+  - first:
+      74: -945264277724328387
+    second: volpe|Janelas|Take 001|BaseLayer
+  - first:
+      74: 5508547157967043690
+    second: volpe|Letreiro_Big Donut|Take 001|BaseLayer
+  - first:
+      74: 8807836346357390687
+    second: volpe|Lixeira_dir|Take 001|BaseLayer
+  - first:
+      74: -7296735955624890299
+    second: volpe|Lixeira_esq|Take 001|BaseLayer
+  - first:
+      74: 3229814607186631433
+    second: volpe|Lixo|Take 001|BaseLayer
+  - first:
+      74: 4591011497786331417
+    second: volpe|Mesa_Base|Take 001|BaseLayer
+  - first:
+      74: -9176523082367027821
+    second: volpe|Mesa_Suporte|Take 001|BaseLayer
+  - first:
+      74: 7733446259272072817
+    second: volpe|Mesa|Take 001|BaseLayer
+  - first:
+      74: 350652943988149682
+    second: volpe|Ombrelone_Suporte|Take 001|BaseLayer
+  - first:
+      74: -8212658040784428892
+    second: volpe|Ombrelone|Take 001|BaseLayer
+  - first:
+      74: -832251457775189249
+    second: volpe|Papeis|Take 001|BaseLayer
+  - first:
+      74: -2101315154516556020
+    second: volpe|Papel_Branco|Take 001|BaseLayer
+  - first:
+      74: -2231069947626961529
+    second: volpe|Papel_Donuts|Take 001|BaseLayer
+  - first:
+      74: -5167281318082760023
+    second: volpe|Papel_Eat_Donut|Take 001|BaseLayer
+  - first:
+      74: -2398437479079885929
+    second: volpe|Papel_Morango|Take 001|BaseLayer
+  - first:
+      74: -3983088950440894318
+    second: volpe|Porta_Movimento_Abre_Fecha|Take 001|BaseLayer
+  - first:
+      74: 923850951156856996
+    second: volpe|Porta|Take 001|BaseLayer
+  - first:
+      74: -5598491668768878614
+    second: volpe|Recheio Donut|Take 001|BaseLayer
+  - first:
+      74: 1380193401360818897
+    second: volpe|Suporte_Bando_dir|Take 001|BaseLayer
+  - first:
+      74: 6914170462699186566
+    second: volpe|Suporte_Bando_esq|Take 001|BaseLayer
+  - first:
+      74: -5640516429264166687
+    second: volpe|Suporte_Cadeira_dir001|Take 001|BaseLayer
+  - first:
+      74: 1322948804119003051
+    second: volpe|Suporte_Cadeira_dir|Take 001|BaseLayer
+  - first:
+      74: -2010561167316449914
+    second: volpe|Suporte_Cadeira_esq001|Take 001|BaseLayer
+  - first:
+      74: -3414818823227015466
+    second: volpe|Suporte_Cadeira_esq|Take 001|BaseLayer
+  - first:
+      74: -7454965647334423749
+    second: volpe|Suporte_Conexao_dir|Take 001|BaseLayer
+  - first:
+      74: -3859949500192571255
+    second: volpe|Suporte_Conexao_esq|Take 001|BaseLayer
+  - first:
+      74: 6339065488094813913
+    second: volpe|Suporte_Donut|Take 001|BaseLayer
+  - first:
+      74: 2902993223744720177
+    second: volpe|Suporte_Tampa|Take 001|BaseLayer
+  - first:
+      74: 4047564821652331899
+    second: volpe|Tampa2|Take 001|BaseLayer
+  - first:
+      74: -8055854433947401842
+    second: volpe|Tampa_Conexao|Take 001|BaseLayer
+  - first:
+      74: 1888064372309750217
+    second: volpe|Tampa|Take 001|BaseLayer
+  - first:
+      74: -2487250243656429373
+    second: volpe|Teto|Take 001|BaseLayer
+  - first:
+      74: -4420236102126054705
+    second: volpe|Toldo|Take 001|BaseLayer
+  - first:
+      74: 8914113205778171819
+    second: volpe|Vidros_Janelas|Take 001|BaseLayer
+  - first:
+      74: 8826622043670898743
+    second: volpe|Vidros_Porta|Take 001|BaseLayer
+  - first:
+      74: -3098933655730967237
+    second: volpe|volpe|volpe|PlaneAction|volpe|PlaneAction
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

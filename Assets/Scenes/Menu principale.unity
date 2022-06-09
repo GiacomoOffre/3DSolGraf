@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -551,7 +551,7 @@ GameObject:
   - component: {fileID: 393190182}
   - component: {fileID: 393190181}
   m_Layer: 5
-  m_Name: Opzioni
+  m_Name: Options
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -685,7 +685,7 @@ GameObject:
   - component: {fileID: 397483824}
   - component: {fileID: 397483823}
   m_Layer: 5
-  m_Name: Opzioni
+  m_Name: Options
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -819,7 +819,7 @@ GameObject:
   - component: {fileID: 405781842}
   - component: {fileID: 405781841}
   m_Layer: 5
-  m_Name: Comandi
+  m_Name: Commands
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1029,7 +1029,7 @@ GameObject:
   - component: {fileID: 436708299}
   - component: {fileID: 436708298}
   m_Layer: 5
-  m_Name: Comandi Button
+  m_Name: ButtonCommand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1843,7 +1843,7 @@ GameObject:
   - component: {fileID: 765057303}
   - component: {fileID: 765057302}
   m_Layer: 5
-  m_Name: Gioca
+  m_Name: Play
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1978,7 +1978,7 @@ GameObject:
   - component: {fileID: 821289505}
   - component: {fileID: 821289504}
   m_Layer: 5
-  m_Name: Indietro Button
+  m_Name: ButtonQuit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2252,7 +2252,7 @@ RectTransform:
   - {fileID: 550845750}
   - {fileID: 841160604}
   m_Father: {fileID: 1416230298}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2399,7 +2399,7 @@ RectTransform:
   - {fileID: 1024516164}
   - {fileID: 86543377}
   m_Father: {fileID: 1416230298}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2478,7 +2478,7 @@ GameObject:
   - component: {fileID: 894140087}
   - component: {fileID: 894140086}
   m_Layer: 5
-  m_Name: Esci
+  m_Name: Exit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2626,16 +2626,16 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 952823366}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 6.088831}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1416230298}
-  m_RootOrder: 2
+  m_Father: {fileID: 1714282366}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -47, y: 22}
-  m_SizeDelta: {x: 9.6956, y: -76.7798}
+  m_AnchoredPosition: {x: -32.772583, y: 32.57628}
+  m_SizeDelta: {x: 109.6956, y: 23.2202}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &952823368
 MonoBehaviour:
@@ -2749,7 +2749,7 @@ GameObject:
   - component: {fileID: 960035477}
   - component: {fileID: 960035476}
   m_Layer: 5
-  m_Name: Gioca Button
+  m_Name: ButtonPlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3119,19 +3119,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1056123180}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 6.088831}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 980728305}
   - {fileID: 581959370}
   - {fileID: 1519353173}
-  m_Father: {fileID: 1416230298}
-  m_RootOrder: 3
+  m_Father: {fileID: 1714282366}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.1396, y: 2.8553}
+  m_AnchoredPosition: {x: 19.367016, y: 13.431579}
   m_SizeDelta: {x: 170.2791, y: 25.7107}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1056123182
@@ -3210,7 +3210,7 @@ GameObject:
   - component: {fileID: 1202793808}
   - component: {fileID: 1202793807}
   m_Layer: 5
-  m_Name: Opzioni Button
+  m_Name: ButtonOptions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3354,7 +3354,7 @@ GameObject:
   - component: {fileID: 1206568612}
   - component: {fileID: 1206568611}
   m_Layer: 5
-  m_Name: Indietro
+  m_Name: Quit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3675,8 +3675,7 @@ RectTransform:
   m_Children:
   - {fileID: 393190180}
   - {fileID: 821289503}
-  - {fileID: 952823367}
-  - {fileID: 1056123181}
+  - {fileID: 1714282366}
   - {fileID: 858052287}
   - {fileID: 841362623}
   m_Father: {fileID: 739267609}
@@ -3723,6 +3722,38 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1714282365
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1714282366}
+  m_Layer: 0
+  m_Name: Volume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1714282366
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714282365}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -14.227417, y: -10.576279, z: -6.088831}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 952823367}
+  - {fileID: 1056123181}
+  m_Father: {fileID: 1416230298}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1761077775
 GameObject:
   m_ObjectHideFlags: 0
@@ -3877,7 +3908,7 @@ GameObject:
   - component: {fileID: 2109535642}
   - component: {fileID: 2109535641}
   m_Layer: 5
-  m_Name: Esci Button
+  m_Name: ButtonExit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

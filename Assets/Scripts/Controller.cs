@@ -36,7 +36,7 @@ public class Controller : MonoBehaviour
         foreach(DetectedFace f in detectedFaces)
         {
             //0 - Jaw; 1-2 Eyebrow; 3 nosebridge; 4 nose; 5-6 Eyes; 7-8 Lips : questi sono gli elementi che è in grado di risconoscere
-           // if (f.Elements[5].Marks !=null)
+            // if (f.Elements[5].Marks !=null)
             if (f.Elements[7].Marks != null & f.Elements[0].Marks != null)
                 {
                 Mat img = OpenCvSharp.Unity.TextureToMat(camTexture.texture as Texture2D);

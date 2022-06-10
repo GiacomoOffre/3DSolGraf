@@ -12,6 +12,9 @@ public class Controller : MonoBehaviour
 
     public double dist39 = 0f;
     public double dist06 = 0f;
+    public double distRel = 0f;
+
+    public string movimento = "nulla";
 
     public List<DetectedFace> detectedFaces; //si vuole che nello script FaceDetector (nella parte di "Inserire qui"), vada a mandare in controller tutte le info relative ai volti 
     // Start is called before the first frame update
@@ -63,6 +66,23 @@ public class Controller : MonoBehaviour
 
                 dist06 = calcolaDist(mark0, mark6);
                 dist39 = calcolaDist(mark3, mark9);
+
+                distRel = (Math.Abs(dist06-dist39)/dist06)*100; 
+                
+                if( distRel <= 55 && distRel >= 45)
+                {
+                    movimento = "soffio";
+                } else if (distRel <= 80 && distRel >= 70)
+                {
+                    movimento = "sorriso";
+                }
+                else if (distRel <= 20 && distRel >= 10)
+                {
+                    movimento = "boccaAperta";
+                } else
+                {
+                    movimento = "nulla";
+                }
 
 
                 img = new Mat(img, r);

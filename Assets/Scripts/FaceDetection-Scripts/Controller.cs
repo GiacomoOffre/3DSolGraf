@@ -60,9 +60,9 @@ public class Controller : MonoBehaviour
 
                 Cv2.Circle(img, mark6, 1, Scalar.FromRgb(255, 0, 0), -1);
 
-                InputArray array0 = new InputArray(2);
 
-                dist06 = Cv2.Norm(array0, NormTypes.L2); 
+                dist06 = calcolaDist(mark0, mark6);
+                dist39 = calcolaDist(mark3, mark9);
 
 
                 img = new Mat(img, r);
@@ -74,6 +74,18 @@ public class Controller : MonoBehaviour
             
         }
 
+    }
+
+    double calcolaDist(Point p1, Point p2)
+    {
+        double x1 = p1.X;
+        double y1 = p1.Y;
+        double x2 = p2.X;
+        double y2 = p2.Y;
+
+        double dist = Math.Sqrt(((x1 - x2) * (x1 - x2)) + ((y1 - y2) * (y1 - y2)));
+
+        return dist;
     }
 
 }

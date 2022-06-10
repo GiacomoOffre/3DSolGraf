@@ -72,7 +72,7 @@ public class Controller : MonoBehaviour
                 if( distRel <= 55 && distRel >= 45)
                 {
                     movimento = "soffio";
-                } else if (distRel <= 30 && distRel >= 20)
+                } else if (distRel <= 27 && distRel >= 23)
                 {
                     movimento = "sorriso";
                 }

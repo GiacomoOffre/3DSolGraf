@@ -67,16 +67,16 @@ public class Controller : MonoBehaviour
                 dist06 = calcolaDist(mark0, mark6);
                 dist39 = calcolaDist(mark3, mark9);
 
-                distRel = (Math.Abs(dist06-dist39)/dist06)*100; 
+                distRel = ((dist39)/dist06)*100; 
                 
                 if( distRel <= 55 && distRel >= 45)
                 {
                     movimento = "soffio";
-                } else if (distRel <= 80 && distRel >= 70)
+                } else if (distRel <= 30 && distRel >= 20)
                 {
                     movimento = "sorriso";
                 }
-                else if (distRel <= 20 && distRel >= 10)
+                else if (distRel <= 80 && distRel >= 70)
                 {
                     movimento = "boccaAperta";
                 } else

@@ -14,7 +14,7 @@ public class SettingMenu : MonoBehaviour
 
     void Start ()
     {
-        resolutions=Screen.resolutions;
+        resolutions = Screen.resolutions;
 
         resolutionDropdow.ClearOptions();
 
@@ -37,24 +37,25 @@ public class SettingMenu : MonoBehaviour
         resolutionDropdow.value = currentResolutionIndex;
         resolutionDropdow.RefreshShownValue();
     }
+
     public void SetResolution(int resolutionIndex)
     {
         Resolution resolution = resolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
     }
+
     public void SetVolume(float volume)
     {
         Debug.Log(volume);
-        audioMixer.SetFloat("Volume",volume);
+        audioMixer.SetFloat("volume",volume);
     }
 
-    public void SetQuality(int qualityIndex)
-    // 0- Low; 1- Medium; 2- High
+    public void SetQuality(int qualityIndex)    // 0- Low; 1- Medium; 2- High
     {
         QualitySettings.SetQualityLevel(qualityIndex);
     }
-
-    public void setFullscreen(bool isFullscreen)
+    
+    public void SetFullscreen(bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
     }

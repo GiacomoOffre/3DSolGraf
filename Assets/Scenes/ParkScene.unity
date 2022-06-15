@@ -458,6 +458,8 @@ MonoBehaviour:
   roiTexture: {fileID: 1231235032}
   dist39: 0
   dist06: 0
+  distRel: 0
+  movimento: nulla
 --- !u!114 &809869594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -619,7 +621,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c4e4d9b83163ce045880c4bce11dc4af, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.265
+      value: 10.04
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c4e4d9b83163ce045880c4bce11dc4af, type: 3}
       propertyPath: m_LocalPosition.y

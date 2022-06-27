@@ -11,12 +11,15 @@ public class gelato : MonoBehaviour
 
     public GameObject[] gelati;
 
-    private int n = 0;
+    int n = 0;
+
+    public GameObject schermataFinale;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        n = 0;
         gelati = new GameObject[3];
         gelati[0] = crema;
         gelati[1] = fragola;
@@ -42,6 +45,11 @@ public class gelato : MonoBehaviour
                 gelati[n].transform.position = cono.transform.position + new Vector3(0, 440, 0);
                 n = n + 1;
             }
+        }
+
+        if (n >= 3)
+        {
+            schermataFinale.SetActive(true);
         }
 
     }

@@ -11,4 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ParkScene.unity
     guid: b858860f049f2304b948bdb29c32ad9b
+  - enabled: 1
+    path: Assets/Scenes/GiocoSoffio.unity
+    guid: c7fca65aad94b394597b94e665d63c99
+  - enabled: 1
+    path: Assets/Scenes/GiocoBoccaAperta.unity
+    guid: 4408ceb6e86e38740a88de61fc2d119d
+  - enabled: 1
+    path: Assets/Scenes/GicoSorriso.unity
+    guid: dd79625957037a541a642c667aeaf65b
   m_configObjects: {}

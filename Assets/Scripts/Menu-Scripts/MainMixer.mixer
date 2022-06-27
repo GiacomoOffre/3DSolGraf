@@ -1,5 +1,29 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!244 &-956591555033858298
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 35ab95b2c0b7b1341b8f7e94bef162a4
+  m_EffectName: Echo
+  m_MixLevel: cda404239e6358c4a95020d100599b1f
+  m_Parameters:
+  - m_ParameterName: Delay
+    m_GUID: 01b946f259e93ee4186cc086d26523f9
+  - m_ParameterName: Decay
+    m_GUID: b6693bc10fab57d44bedd629bc3ec0ae
+  - m_ParameterName: Max channels
+    m_GUID: b190228581133fd42a9a48509fb52108
+  - m_ParameterName: Drymix
+    m_GUID: 07f1b5e732409ea42a67d515076e7322
+  - m_ParameterName: Wetmix
+    m_GUID: dd1c44950a548f04884a5cb89ca48dbe
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!241 &24100000
 AudioMixerController:
   m_ObjectHideFlags: 0

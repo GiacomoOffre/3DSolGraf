@@ -18,6 +18,8 @@ public class eating : MonoBehaviour
 
     private GameObject[] ciambelle;
 
+    public GameObject schermataFinale;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,6 +42,11 @@ public class eating : MonoBehaviour
             donuteater.transform.position = ciambelle[nCiambelle].transform.position;
             ciambelle[nCiambelle].active = false;
             nCiambelle = nCiambelle +1;            
+        }
+
+        if (nCiambelle >= 7)
+        {
+            schermataFinale.SetActive(true);
         }
         
     }

@@ -25,6 +25,10 @@ public class gelato : MonoBehaviour
 
     float timeLeft = 30.0f;
 
+    Controller c;
+
+    double n = c.dist06rest;
+
     // Start is called before the first frame update
     void Start()
     {

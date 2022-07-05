@@ -467,7 +467,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -738, y: 71}
+  m_AnchoredPosition: {x: -615, y: 71}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &265125378
@@ -604,6 +604,11 @@ MonoBehaviour:
   schermataIniziale: {fileID: 0}
   gioca: {fileID: 0}
   nGelato: {fileID: 0}
+  d06: 0
+  d39: 0
+  soglia: 0
+  camTexture: {fileID: 0}
+  roiTexture: {fileID: 0}
 --- !u!1 &379502467
 GameObject:
   m_ObjectHideFlags: 0
@@ -844,7 +849,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -737, y: -234}
+  m_AnchoredPosition: {x: -615, y: -234}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &527679781
@@ -2190,6 +2195,11 @@ MonoBehaviour:
   schermataIniziale: {fileID: 1292369467}
   gioca: {fileID: 1367170139}
   nGelato: {fileID: 1853701283}
+  d06: 0
+  d39: 0
+  soglia: 0
+  camTexture: {fileID: 265125378}
+  roiTexture: {fileID: 527679781}
 --- !u!1 &1843339528
 GameObject:
   m_ObjectHideFlags: 0

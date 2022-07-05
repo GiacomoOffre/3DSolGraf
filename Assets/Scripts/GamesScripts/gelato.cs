@@ -32,7 +32,9 @@ public class gelato : MonoBehaviour
 
     float timeLeft = 35.0f;
 
-    Controller controller;
+    Controller cr;
+    double dist06rest = Controller.dist06rest;
+    double dist39rest = Controller.dist39rest;
 
     public double d06 = 0f;
     public double d39 = 0f;
@@ -54,7 +56,6 @@ public class gelato : MonoBehaviour
         gelati[2] = cioccolato;
 
         detectedFaces = new List<DetectedFace>();
-
         
     }
 
@@ -62,9 +63,9 @@ public class gelato : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-            timeLeft -= Time.deltaTime;
-            float seconds = Mathf.FloorToInt(timeLeft % 60);
-            timer.text = string.Format("{0:00} sec", seconds);
+        timeLeft -= Time.deltaTime;
+        float seconds = Mathf.FloorToInt(timeLeft % 60);
+        timer.text = string.Format("{0:00} sec", seconds);
 
         foreach (DetectedFace f in detectedFaces)
         {
@@ -95,17 +96,17 @@ public class gelato : MonoBehaviour
 
 
                 d06 = calcolaDist(mark0, mark6);
-                d39 = calcolaDist(mark3, mark9);       
+                d39 = calcolaDist(mark3, mark9);
 
-                soglia = (d06-c)
-               
+                soglia = ((d06 - dist06rest) / dist06rest) * 100;
+
                 img = new Mat(img, r);
                 //img = new Mat(img, s);
                 roiTexture.texture = OpenCvSharp.Unity.MatToTexture(img);
 
             }
 
-            if (Input.GetButtonDown("Jump") && n < 3)
+            if (soglia>22 && n < 3)
             {
                 if (n == 0)
                 {
@@ -141,8 +142,9 @@ public class gelato : MonoBehaviour
                 }
 
             }
-        
 
+
+        }
     }
 
     IEnumerator  wait()

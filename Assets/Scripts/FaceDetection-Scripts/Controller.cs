@@ -24,6 +24,10 @@ public class Controller : MonoBehaviour
     float timeLeft = 10.0f;
 
     public TextMeshProUGUI timer;
+    public TextMeshProUGUI textSopra;
+    public TextMeshProUGUI textSotto;
+
+    public int miniGioco = 1; //può essere 1 2 o 3
 
     public List<DetectedFace> detectedFaces; //si vuole che nello script FaceDetector (nella parte di "Inserire qui"), vada a mandare in controller tutte le info relative ai volti 
     // Start is called before the first frame update
@@ -107,6 +111,8 @@ public class Controller : MonoBehaviour
             camTexture.gameObject.SetActive(false);
             roiTexture.gameObject.SetActive(false);
             timer.gameObject.SetActive(false);
+            textSopra.gameObject.SetActive(false);
+            textSotto.gameObject.SetActive(false);
             ok.SetActive(true);
         }
     }
@@ -193,7 +199,7 @@ public class Controller : MonoBehaviour
 
     public void next()
     {
-        SceneManager.LoadScene("GiocoSorriso");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + miniGioco);
     }
 
 }

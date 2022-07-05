@@ -13,8 +13,8 @@ public class Controller : MonoBehaviour
     public RawImage roiTexture;
     public GameObject ok;
 
-    private static double dist39rest = 0f;
-    private static double dist06rest = 0f;
+    public double dist39rest = 0f;
+    public static double dist06rest = 0f;
     public double d06 = 0f;
     public double d39 = 0f;
     public double distRelrest = 0f;

@@ -408,7 +408,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &626118587
 RectTransform:
   m_ObjectHideFlags: 0
@@ -583,10 +583,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camTexture: {fileID: 626118588}
   roiTexture: {fileID: 1231235032}
-  dist39: 0
-  dist06: 0
-  distRel: 0
+  ok: {fileID: 0}
+  d06: 0
+  d39: 0
+  distRelrest: 0
   movimento: nulla
+  timer: {fileID: 0}
 --- !u!114 &809869594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1308,7 +1310,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1231235032
 MonoBehaviour:
   m_ObjectHideFlags: 0

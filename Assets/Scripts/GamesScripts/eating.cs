@@ -69,7 +69,7 @@ public class eating : MonoBehaviour
         timeLeft -= Time.deltaTime;
         float seconds = Mathf.FloorToInt(timeLeft % 60);
         timer.text = string.Format("{0:00} sec", seconds);
-        if (timeLeft < 0 || nCiambelle >= 7)
+        if (timeLeft > 0)
         {
             foreach (DetectedFace f in detectedFaces)
             {
@@ -102,38 +102,42 @@ public class eating : MonoBehaviour
                     d06 = calcolaDist(mark0, mark6);
                     d39 = calcolaDist(mark3, mark9);
 
-                    soglia = ((d06 - dist06rest) / dist06rest) * 100;
+                    soglia = ((d39 - dist39rest) / dist39rest) * 100;
+
+                    if (soglia>110)
+                    {
+                        donuteater.transform.position = ciambelle[nCiambelle].transform.position;
+                        ciambelle[nCiambelle].active = false;
+                        nCiambelle = nCiambelle + 1;
+                    }
 
                     img = new Mat(img, r);
                     //img = new Mat(img, s);
                     roiTexture.texture = OpenCvSharp.Unity.MatToTexture(img);
 
-                }
+                }           
 
-
-                if (Input.GetButtonDown("Jump") && nCiambelle < 7)
-                {
-                    donuteater.transform.position = ciambelle[nCiambelle].transform.position;
-                    ciambelle[nCiambelle].active = false;
-                    nCiambelle = nCiambelle + 1;
-                }
-
-                if (nCiambelle >= 7)
-                {
-                    StartCoroutine("wait");
-                }
-                else
-                {
-                    schermataFinale.SetActive(true);
-                    sconfitta.gameObject.SetActive(true);
-                    ciambelleMangiate.text = nCiambelle.ToString();
-                    timer.gameObject.SetActive(false);
-                    camTexture.gameObject.SetActive(false);
-                    roiTexture.gameObject.SetActive(false);
-                }
+                
 
             }
         }
+        else
+        {
+            if (nCiambelle >= 7)
+            {
+                StartCoroutine("wait");
+            }
+            else
+            {
+                schermataFinale.SetActive(true);
+                sconfitta.gameObject.SetActive(true);
+                ciambelleMangiate.text = nCiambelle.ToString();
+                timer.gameObject.SetActive(false);
+                camTexture.gameObject.SetActive(false);
+                roiTexture.gameObject.SetActive(false);
+            }
+        }
+
     }
 
     IEnumerator wait()

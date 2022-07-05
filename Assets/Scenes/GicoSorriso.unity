@@ -599,8 +599,6 @@ MonoBehaviour:
   vittoria: {fileID: 0}
   sconfitta: {fileID: 0}
   timer: {fileID: 0}
-  rawimage: {fileID: 0}
-  roiRawImage: {fileID: 0}
   schermataIniziale: {fileID: 0}
   gioca: {fileID: 0}
   nGelato: {fileID: 0}
@@ -1085,7 +1083,6 @@ GameObject:
   - component: {fileID: 744294787}
   - component: {fileID: 744294786}
   - component: {fileID: 744294785}
-  - component: {fileID: 744294789}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1184,25 +1181,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &744294789
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 744294784}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f99ed39479b001e498be2eda07d41cbc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Surface: {fileID: 265125376}
-  forceDevice: 1
-  deviceNumber: 0
-  faces: {fileID: 4900000, guid: 01988adf0b53c244b826e291727ff88b, type: 3}
-  eyes: {fileID: 4900000, guid: 33aa7eb57bb854f43b42b1bc1608ba70, type: 3}
-  shapes: {fileID: 4900000, guid: 077455dc95a136649b83e23c650dd7a0, type: 3}
-  sceneController: {fileID: 744294784}
 --- !u!1 &959743575
 GameObject:
   m_ObjectHideFlags: 0
@@ -2107,6 +2085,7 @@ GameObject:
   - component: {fileID: 1707087916}
   - component: {fileID: 1707087915}
   - component: {fileID: 1707087914}
+  - component: {fileID: 1707087918}
   - component: {fileID: 1707087917}
   m_Layer: 5
   m_Name: Cono
@@ -2190,8 +2169,6 @@ MonoBehaviour:
   vittoria: {fileID: 602356189}
   sconfitta: {fileID: 996212144}
   timer: {fileID: 1843339529}
-  rawimage: {fileID: 265125376}
-  roiRawImage: {fileID: 527679779}
   schermataIniziale: {fileID: 1292369467}
   gioca: {fileID: 1367170139}
   nGelato: {fileID: 1853701283}
@@ -2200,6 +2177,25 @@ MonoBehaviour:
   soglia: 0
   camTexture: {fileID: 265125378}
   roiTexture: {fileID: 527679781}
+--- !u!114 &1707087918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1707087913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f99ed39479b001e498be2eda07d41cbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Surface: {fileID: 265125376}
+  forceDevice: 1
+  deviceNumber: 0
+  faces: {fileID: 4900000, guid: 01988adf0b53c244b826e291727ff88b, type: 3}
+  eyes: {fileID: 4900000, guid: 33aa7eb57bb854f43b42b1bc1608ba70, type: 3}
+  shapes: {fileID: 4900000, guid: 077455dc95a136649b83e23c650dd7a0, type: 3}
+  sceneController: {fileID: 1707087913}
 --- !u!1 &1843339528
 GameObject:
   m_ObjectHideFlags: 0

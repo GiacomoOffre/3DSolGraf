@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+using UnityEngine.SceneManagement;
+using System;
+using OpenCvSharp;
 
 public class eating : MonoBehaviour
 {
@@ -19,6 +23,29 @@ public class eating : MonoBehaviour
     private GameObject[] ciambelle;
 
     public GameObject schermataFinale;
+    public Image vittoria;
+    public Image sconfitta;
+    public TextMeshProUGUI timer;
+
+    public GameObject schermataIniziale;
+    public Button gioca;
+
+    public TextMeshProUGUI ciambelleMangiate;
+
+    float timeLeft = 35.0f;
+
+    Controller cr;
+    double dist06rest = Controller.dist06rest;
+    double dist39rest = Controller.dist39rest;
+
+    public double d06 = 0f;
+    public double d39 = 0f;
+    public double soglia = 0f;
+
+    public List<DetectedFace> detectedFaces;
+
+    public RawImage camTexture;
+    public RawImage roiTexture;
 
     // Start is called before the first frame update
     void Start()
@@ -31,23 +58,121 @@ public class eating : MonoBehaviour
         ciambelle[4] = ciambella02;
         ciambelle[5] = ciambella01;
         ciambelle[6] = ciambella00;
+
+        detectedFaces = new List<DetectedFace>();
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        if (Input.GetButtonDown("Jump") && nCiambelle<7)
+        timeLeft -= Time.deltaTime;
+        float seconds = Mathf.FloorToInt(timeLeft % 60);
+        timer.text = string.Format("{0:00} sec", seconds);
+        if (timeLeft < 0 || nCiambelle >= 7)
         {
-            donuteater.transform.position = ciambelle[nCiambelle].transform.position;
-            ciambelle[nCiambelle].active = false;
-            nCiambelle = nCiambelle +1;            
-        }
+            foreach (DetectedFace f in detectedFaces)
+            {
+                //0 - Jaw; 1-2 Eyebrow; 3 nosebridge; 4 nose; 5-6 Eyes; 7-8 Lips : questi sono gli elementi che è in grado di risconoscere
+                // if (f.Elements[5].Marks !=null)
+                if (f.Elements[7].Marks != null & f.Elements[0].Marks != null)
+                {
+                    Mat img = OpenCvSharp.Unity.TextureToMat(camTexture.texture as Texture2D);
+                    // OpenCvSharp.Rect r = Cv2.BoundingRect(f.Elements[5].Marks); //si crea un rettangolo minimo che includa tutti i marker
+                    OpenCvSharp.Rect r = Cv2.BoundingRect(f.Elements[0].Marks); //si crea un rettangolo minimo che includa tutti i marker
+                    OpenCvSharp.Rect s = Cv2.BoundingRect(f.Elements[7].Marks); //si crea un rettangolo minimo che includa tutti i marker
 
-        if (nCiambelle >= 7)
-        {
-            schermataFinale.SetActive(true);
+                    Point mark0 = f.Elements[7].Marks[0];
+
+                    Cv2.Circle(img, mark0, 1, Scalar.FromRgb(255, 0, 0), -1);
+
+                    Point mark3 = f.Elements[7].Marks[3];
+
+                    Cv2.Circle(img, mark3, 1, Scalar.FromRgb(255, 0, 0), -1);
+
+                    Point mark9 = f.Elements[7].Marks[9];
+
+                    Cv2.Circle(img, mark9, 1, Scalar.FromRgb(255, 0, 0), -1);
+
+                    Point mark6 = f.Elements[7].Marks[6];
+
+                    Cv2.Circle(img, mark6, 1, Scalar.FromRgb(255, 0, 0), -1);
+
+
+                    d06 = calcolaDist(mark0, mark6);
+                    d39 = calcolaDist(mark3, mark9);
+
+                    soglia = ((d06 - dist06rest) / dist06rest) * 100;
+
+                    img = new Mat(img, r);
+                    //img = new Mat(img, s);
+                    roiTexture.texture = OpenCvSharp.Unity.MatToTexture(img);
+
+                }
+
+
+                if (Input.GetButtonDown("Jump") && nCiambelle < 7)
+                {
+                    donuteater.transform.position = ciambelle[nCiambelle].transform.position;
+                    ciambelle[nCiambelle].active = false;
+                    nCiambelle = nCiambelle + 1;
+                }
+
+                if (nCiambelle >= 7)
+                {
+                    StartCoroutine("wait");
+                }
+                else
+                {
+                    schermataFinale.SetActive(true);
+                    sconfitta.gameObject.SetActive(true);
+                    ciambelleMangiate.text = nCiambelle.ToString();
+                    timer.gameObject.SetActive(false);
+                    camTexture.gameObject.SetActive(false);
+                    roiTexture.gameObject.SetActive(false);
+                }
+
+            }
         }
-        
     }
+
+    IEnumerator wait()
+    {
+        yield return new WaitForSeconds(1);
+        schermataFinale.SetActive(true);
+        vittoria.gameObject.SetActive(true);
+        timer.gameObject.SetActive(false);
+        camTexture.gameObject.SetActive(false);
+        roiTexture.gameObject.SetActive(false);
+    }
+
+    public void MainGame()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+    public void playAgain()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void Gioca()
+    {
+        schermataIniziale.SetActive(false);
+        gioca.gameObject.SetActive(false);
+    }
+
+    double calcolaDist(Point p1, Point p2)
+    {
+        double x1 = p1.X;
+        double y1 = p1.Y;
+        double x2 = p2.X;
+        double y2 = p2.Y;
+
+        double dist = Math.Sqrt(((x1 - x2) * (x1 - x2)) + ((y1 - y2) * (y1 - y2)));
+
+        return dist;
+    }
+
+
 }

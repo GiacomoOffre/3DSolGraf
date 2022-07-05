@@ -1121,9 +1121,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: PlayGame
+      - m_Target: {fileID: 2068772391}
+        m_TargetAssemblyTypeName: eating, Assembly-CSharp
+        m_MethodName: playAgain
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1594,9 +1594,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: PlayGame
+      - m_Target: {fileID: 2068772391}
+        m_TargetAssemblyTypeName: eating, Assembly-CSharp
+        m_MethodName: playAgain
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2226,9 +2226,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: gelato, Assembly-CSharp
-        m_MethodName: playAgain
+      - m_Target: {fileID: 2068772391}
+        m_TargetAssemblyTypeName: eating, Assembly-CSharp
+        m_MethodName: Gioca
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2565,9 +2565,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: PlayGame
+      - m_Target: {fileID: 2068772391}
+        m_TargetAssemblyTypeName: eating, Assembly-CSharp
+        m_MethodName: MainGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2698,9 +2698,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: PlayGame
+      - m_Target: {fileID: 2068772391}
+        m_TargetAssemblyTypeName: eating, Assembly-CSharp
+        m_MethodName: MainGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

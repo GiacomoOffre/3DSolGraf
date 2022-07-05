@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 3743779}
   - component: {fileID: 3743778}
   m_Layer: 5
-  m_Name: ButtonGioca
+  m_Name: ButtonQuit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -186,10 +186,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 501147344}
-        m_TargetAssemblyTypeName: Controller, Assembly-CSharp
-        m_MethodName: next
-        m_Mode: 1
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -422,7 +422,6 @@ GameObject:
   - component: {fileID: 501147341}
   - component: {fileID: 501147340}
   - component: {fileID: 501147344}
-  - component: {fileID: 501147345}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -530,30 +529,11 @@ MonoBehaviour:
   camTexture: {fileID: 1435696088}
   roiTexture: {fileID: 841063577}
   ok: {fileID: 3743777}
-  d06: 0
-  d39: 0
+  dist39rest: 0
+  dist06rest: 0
   distRelrest: 0
   movimento: nulla
   timer: {fileID: 1647164901}
---- !u!114 &501147345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 501147339}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f99ed39479b001e498be2eda07d41cbc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Surface: {fileID: 1435696086}
-  forceDevice: 1
-  deviceNumber: 0
-  faces: {fileID: 4900000, guid: 01988adf0b53c244b826e291727ff88b, type: 3}
-  eyes: {fileID: 4900000, guid: 33aa7eb57bb854f43b42b1bc1608ba70, type: 3}
-  shapes: {fileID: 4900000, guid: 077455dc95a136649b83e23c650dd7a0, type: 3}
-  sceneController: {fileID: 501147339}
 --- !u!1 &841063575
 GameObject:
   m_ObjectHideFlags: 0

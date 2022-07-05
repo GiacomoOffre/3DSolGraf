@@ -25,8 +25,6 @@ public class Controller : MonoBehaviour
 
     public TextMeshProUGUI timer;
 
-    public int miniGioco = 3;
-
     public List<DetectedFace> detectedFaces; //si vuole che nello script FaceDetector (nella parte di "Inserire qui"), vada a mandare in controller tutte le info relative ai volti 
     // Start is called before the first frame update
     void Start()
@@ -195,7 +193,7 @@ public class Controller : MonoBehaviour
 
     public void next()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + miniGioco);
+        SceneManager.LoadScene("GiocoSorriso");
     }
 
 }

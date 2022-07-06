@@ -38,7 +38,7 @@ public class soffio : MonoBehaviour
 
     public TextMeshProUGUI timer;
 
-    float timeLeft = 35.0f;
+    float timeLeft = 32.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -136,15 +136,17 @@ public class soffio : MonoBehaviour
         {
             if (win==true)
             {
+		timer.gameObject.SetActive(false);
                 StartCoroutine("wait");
             }
             else
             {
+		timer.gameObject.SetActive(false);
                 schermataFinale.SetActive(true);
                 sconfitta.gameObject.SetActive(true);                
                 camTexture.gameObject.SetActive(false);
                 roiTexture.gameObject.SetActive(false);
-                timer.gameObject.SetActive(false);
+                //timer.gameObject.SetActive(false);
             }
         }     
 
@@ -159,7 +161,7 @@ public class soffio : MonoBehaviour
         vittoria.gameObject.SetActive(true);
         camTexture.gameObject.SetActive(false);
         roiTexture.gameObject.SetActive(false);
-        timer.gameObject.SetActive(false);
+        //timer.gameObject.SetActive(false);
     }
 
     public void MainGame()

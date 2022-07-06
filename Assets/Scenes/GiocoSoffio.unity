@@ -811,7 +811,6 @@ GameObject:
   - component: {fileID: 533167454}
   - component: {fileID: 533167457}
   - component: {fileID: 533167456}
-  - component: {fileID: 533167455}
   m_Layer: 5
   m_Name: Barca00
   m_TagString: Untagged
@@ -838,35 +837,6 @@ RectTransform:
   m_AnchoredPosition: {x: -832.99994, y: -308}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &533167455
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 533167453}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ec1f541757ff2e4ab13db4975db3aa3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cono: {fileID: 0}
-  crema: {fileID: 0}
-  fragola: {fileID: 0}
-  cioccolato: {fileID: 0}
-  gelati: []
-  schermataFinale: {fileID: 0}
-  vittoria: {fileID: 0}
-  sconfitta: {fileID: 0}
-  timer: {fileID: 0}
-  schermataIniziale: {fileID: 0}
-  gioca: {fileID: 0}
-  nGelato: {fileID: 0}
-  d06: 0
-  d39: 0
-  soglia: 0
-  camTexture: {fileID: 0}
-  roiTexture: {fileID: 0}
 --- !u!114 &533167456
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -32,7 +32,7 @@ public class eating : MonoBehaviour
 
     public TextMeshProUGUI ciambelleMangiate;
 
-    float timeLeft = 35.0f;
+    float timeLeft = 32.0f;
 
     Controller cr;
     double dist06rest = Controller.dist06rest;
@@ -125,14 +125,15 @@ public class eating : MonoBehaviour
         {
             if (nCiambelle >= 7)
             {
+		timer.gameObject.SetActive(false);
                 StartCoroutine("wait");
             }
             else
             {
+		timer.gameObject.SetActive(false);
                 schermataFinale.SetActive(true);
                 sconfitta.gameObject.SetActive(true);
                 ciambelleMangiate.text = nCiambelle.ToString();
-                timer.gameObject.SetActive(false);
                 camTexture.gameObject.SetActive(false);
                 roiTexture.gameObject.SetActive(false);
             }
@@ -145,7 +146,6 @@ public class eating : MonoBehaviour
         yield return new WaitForSeconds(1);
         schermataFinale.SetActive(true);
         vittoria.gameObject.SetActive(true);
-        timer.gameObject.SetActive(false);
         camTexture.gameObject.SetActive(false);
         roiTexture.gameObject.SetActive(false);
     }

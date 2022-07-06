@@ -30,7 +30,7 @@ public class gelato : MonoBehaviour
 
     public TextMeshProUGUI nGelato;
 
-    float timeLeft = 35.0f;
+    float timeLeft = 32.0f;
 
     Controller cr;
     double dist06rest = Controller.dist06rest;
@@ -135,14 +135,15 @@ public class gelato : MonoBehaviour
         {
             if (n >= 3)
             {
+		timer.gameObject.SetActive(false);
                 StartCoroutine("wait");
             }
             else
             {
+		timer.gameObject.SetActive(false);
                 schermataFinale.SetActive(true);
                 sconfitta.gameObject.SetActive(true);
                 nGelato.text = n.ToString();
-                timer.gameObject.SetActive(false);
                 camTexture.gameObject.SetActive(false);
                 roiTexture.gameObject.SetActive(false);
             }
@@ -154,7 +155,6 @@ public class gelato : MonoBehaviour
         yield return new WaitForSeconds(1);
         schermataFinale.SetActive(true);
         vittoria.gameObject.SetActive(true);
-        timer.gameObject.SetActive(false);
         camTexture.gameObject.SetActive(false);
         roiTexture.gameObject.SetActive(false);
     }

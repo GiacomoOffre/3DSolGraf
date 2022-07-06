@@ -36,6 +36,10 @@ public class soffio : MonoBehaviour
     public RawImage camTexture;
     public RawImage roiTexture;
 
+    public TextMeshProUGUI timer;
+
+    float timeLeft = 35.0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -55,7 +59,10 @@ public class soffio : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (barca01.transform.position.x < 1800) 
+        timeLeft -= Time.deltaTime;
+        float seconds = Mathf.FloorToInt(timeLeft % 60);
+        timer.text = string.Format("{0:00} sec", seconds);
+        if (timeLeft > 0) 
         {
 
             foreach (DetectedFace f in detectedFaces)
@@ -137,6 +144,7 @@ public class soffio : MonoBehaviour
                 sconfitta.gameObject.SetActive(true);                
                 camTexture.gameObject.SetActive(false);
                 roiTexture.gameObject.SetActive(false);
+                timer.gameObject.SetActive(false);
             }
         }     
 
@@ -151,6 +159,7 @@ public class soffio : MonoBehaviour
         vittoria.gameObject.SetActive(true);
         camTexture.gameObject.SetActive(false);
         roiTexture.gameObject.SetActive(false);
+        timer.gameObject.SetActive(false);
     }
 
     public void MainGame()

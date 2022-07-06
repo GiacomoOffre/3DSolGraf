@@ -64,6 +64,27 @@ public class soffio : MonoBehaviour
         timer.text = string.Format("{0:00} sec", seconds);
         if (timeLeft > 0) 
         {
+		
+	    if (barcaVeloce == true)
+                    {
+                        barca00.transform.position = barca00.transform.position + new Vector3((float)0.3, 0, 0);
+                        barca02.transform.position = barca02.transform.position + new Vector3((float)0.1, 0, 0);
+
+                        if (barca00.transform.position.x == 1800)
+                        {
+                            win = false;
+                        }
+                    }
+                    else
+                    {
+                        barca00.transform.position = barca00.transform.position + new Vector3((float)0.1, 0, 0);
+                        barca02.transform.position = barca02.transform.position + new Vector3((float)0.3, 0, 0);
+
+                        if (barca02.transform.position.x == 1800)
+                        {
+                            win = false;
+                        }
+                    }
 
             foreach (DetectedFace f in detectedFaces)
             {
@@ -101,27 +122,6 @@ public class soffio : MonoBehaviour
                     if (soglia<-10)
                     {
                         barca01.transform.position = barca01.transform.position + new Vector3(100, 0, 0);
-                    }
-
-                    if (barcaVeloce == true)
-                    {
-                        barca00.transform.position = barca00.transform.position + new Vector3((float)0.3, 0, 0);
-                        barca02.transform.position = barca02.transform.position + new Vector3((float)0.1, 0, 0);
-
-                        if (barca00.transform.position.x == 1800)
-                        {
-                            win = false;
-                        }
-                    }
-                    else
-                    {
-                        barca00.transform.position = barca00.transform.position + new Vector3((float)0.1, 0, 0);
-                        barca02.transform.position = barca02.transform.position + new Vector3((float)0.3, 0, 0);
-
-                        if (barca02.transform.position.x == 1800)
-                        {
-                            win = false;
-                        }
                     }
 
                     img = new Mat(img, r);

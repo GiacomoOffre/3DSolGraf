@@ -66,10 +66,30 @@ public class gelato : MonoBehaviour
         timeLeft -= Time.deltaTime;
         float seconds = Mathf.FloorToInt(timeLeft % 60);
         timer.text = string.Format("{0:00} sec", seconds);
-      if (timeLeft > 0)
+      if (timeLeft > 0 & n<3)
        {
 
-            foreach (DetectedFace f in detectedFaces)
+	    if (Input.GetKeyDown("space")){
+			if (n == 0)
+                        {
+                            gelati[n].transform.position = cono.transform.position + new Vector3(0, 150, 0);
+                            n = n + 1;
+                        }
+                        else if (n == 1)
+                        {
+                            gelati[n].transform.position = cono.transform.position + new Vector3(0, 220, 0);
+                            n = n + 1;
+                        }
+                        else if (n == 2)
+                        {
+                            gelati[n].transform.position = cono.transform.position + new Vector3(0, 320, 0);
+                            n = n + 1;
+                        }
+	     }
+
+
+
+            /*foreach (DetectedFace f in detectedFaces)
             {
 
 
@@ -127,7 +147,7 @@ public class gelato : MonoBehaviour
 
                 }
 
-            }
+            }*/
 
 
         }
@@ -154,6 +174,7 @@ public class gelato : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         schermataFinale.SetActive(true);
+        sconfitta.gameObject.SetActive(false);
         vittoria.gameObject.SetActive(true);
         camTexture.gameObject.SetActive(false);
         roiTexture.gameObject.SetActive(false);

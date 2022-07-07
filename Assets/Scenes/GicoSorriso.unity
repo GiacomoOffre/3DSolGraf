@@ -630,7 +630,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &265125377
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3223,6 +3223,8 @@ MonoBehaviour:
   Surface: {fileID: 265125376}
   forceDevice: 1
   deviceNumber: 0
+  webCamTexture: {fileID: 0}
+  renderedTexture: {fileID: 0}
   faces: {fileID: 4900000, guid: 01988adf0b53c244b826e291727ff88b, type: 3}
   eyes: {fileID: 4900000, guid: 33aa7eb57bb854f43b42b1bc1608ba70, type: 3}
   shapes: {fileID: 4900000, guid: 077455dc95a136649b83e23c650dd7a0, type: 3}

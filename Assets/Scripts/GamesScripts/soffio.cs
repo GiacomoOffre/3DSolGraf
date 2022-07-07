@@ -62,31 +62,38 @@ public class soffio : MonoBehaviour
         timeLeft -= Time.deltaTime;
         float seconds = Mathf.FloorToInt(timeLeft % 60);
         timer.text = string.Format("{0:00} sec", seconds);
-        if (timeLeft > 0) 
+
+        if (barca01.transform.position.x<1200) 
         {
 		
 	    if (barcaVeloce == true)
                     {
-                        barca00.transform.position = barca00.transform.position + new Vector3((float)0.3, 0, 0);
-                        barca02.transform.position = barca02.transform.position + new Vector3((float)0.1, 0, 0);
+                        barca00.transform.position = barca00.transform.position + new Vector3((float)0.7, 0, 0); //0.3
+                        barca02.transform.position = barca02.transform.position + new Vector3((float)0.2, 0, 0); //0.1
 
-                        if (barca00.transform.position.x == 1800)
+                        if (barca00.transform.position.x > 1200) //== 1800
                         {
                             win = false;
                         }
                     }
                     else
                     {
-                        barca00.transform.position = barca00.transform.position + new Vector3((float)0.1, 0, 0);
-                        barca02.transform.position = barca02.transform.position + new Vector3((float)0.3, 0, 0);
+                        barca00.transform.position = barca00.transform.position + new Vector3((float)0.2, 0, 0); //0.1
+                        barca02.transform.position = barca02.transform.position + new Vector3((float)0.7, 0, 0); //0.3
 
-                        if (barca02.transform.position.x == 1800)
+                        if (barca02.transform.position.x > 1200) //== 1800
                         {
                             win = false;
                         }
                     }
 
-            foreach (DetectedFace f in detectedFaces)
+
+		if (Input.GetKeyDown("space"))
+                    {
+                        barca01.transform.position = barca01.transform.position + new Vector3(100, 0, 0);
+                    }
+
+            /*foreach (DetectedFace f in detectedFaces)
             {
 
 
@@ -130,7 +137,7 @@ public class soffio : MonoBehaviour
 
                 }
 
-            }
+            }*/
         }
         else
         {

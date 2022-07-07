@@ -69,9 +69,18 @@ public class eating : MonoBehaviour
         timeLeft -= Time.deltaTime;
         float seconds = Mathf.FloorToInt(timeLeft % 60);
         timer.text = string.Format("{0:00} sec", seconds);
-        if (timeLeft > 0)
+        if (timeLeft > 0 & nCiambelle < 7)
         {
-            foreach (DetectedFace f in detectedFaces)
+            
+		if (Input.GetKeyDown("space"))
+                    {
+                        donuteater.transform.position = ciambelle[nCiambelle].transform.position;
+                        ciambelle[nCiambelle].active = false;
+                        nCiambelle = nCiambelle + 1;
+                    }
+
+
+	    /*foreach (DetectedFace f in detectedFaces)
             {
                 //0 - Jaw; 1-2 Eyebrow; 3 nosebridge; 4 nose; 5-6 Eyes; 7-8 Lips : questi sono gli elementi che è in grado di risconoscere
                 // if (f.Elements[5].Marks !=null)
@@ -119,7 +128,7 @@ public class eating : MonoBehaviour
 
                 
 
-            }
+            }*/
         }
         else
         {

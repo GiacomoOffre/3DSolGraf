@@ -101,7 +101,6 @@ public class Controller : MonoBehaviour
                     img = new Mat(img, r);
                     //img = new Mat(img, s);
                     roiTexture.texture = OpenCvSharp.Unity.MatToTexture(img);
-
                 }
 
 
@@ -115,8 +114,7 @@ public class Controller : MonoBehaviour
             textSopra.gameObject.SetActive(false);
             textSotto.gameObject.SetActive(false);
             ok.SetActive(true);
-            
-
+            FaceDetector.webcamOn = false;
         }
     }
 

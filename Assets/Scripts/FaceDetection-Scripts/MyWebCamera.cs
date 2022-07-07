@@ -25,6 +25,8 @@ public abstract class MyWebCamera : MonoBehaviour
     /// </summary>
     protected bool forceFrontalCamera = false;
 
+    static public  bool webcamOn = true;
+
     /// <summary>
     /// WebCam texture parameters to compensate rotations, flips etc.
     /// </summary>
@@ -115,6 +117,7 @@ public abstract class MyWebCamera : MonoBehaviour
     /// </summary>
     protected virtual void Awake()
     {
+        //webCamTexture.Play();
         if (!forceDevice)
         {
             if (WebCamTexture.devices.Length > 0)
@@ -134,19 +137,24 @@ public abstract class MyWebCamera : MonoBehaviour
 
     void OnDestroy()
     {
-        if (webCamTexture != null)
-        {
-            if (webCamTexture.isPlaying)
-            {
-                webCamTexture.Stop();
-            }
-            webCamTexture = null;
-        }
+        webCamTexture.Stop();
+        webCamTexture = null;
+        webCamDevice = null;
+        
 
-        if (webCamDevice != null)
-        {
-            webCamDevice = null;
-        }
+        //if (webCamTexture != null)
+        //{
+        //    if (webCamTexture.isPlaying)
+        //    {
+        //        webCamTexture.Stop();
+        //    }
+        //    webCamTexture = null;
+        //}
+
+        //if (webCamDevice != null)
+        //{
+        //    webCamDevice = null;
+        //}
     }
 
     /// <summary>

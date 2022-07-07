@@ -6,6 +6,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using OpenCvSharp;
+using UnityEngine.SceneManagement;
 
 public class FaceDetector : MyWebCamera
 {
@@ -16,8 +17,10 @@ public class FaceDetector : MyWebCamera
     public GameObject sceneController; //è l'oggetto che ospiterà i valori degli elementi identificati
 
 	private FaceProcessorLive<WebCamTexture> processor;
-	private Controller controller; 
-
+	private Controller controller;
+	private gelato gelato;
+	private eating eater;
+	private soffio soffio;
 
 	/// <summary>
 	/// Default initializer for MonoBehavior sub-classes
@@ -93,9 +96,28 @@ public class FaceDetector : MyWebCamera
 			Inserire qui il codice che gestisce cosa fare delle informazioni circa i volti
 			identificati..
 			*/
-			controller = sceneController.GetComponent<Controller>();	//ogni volta che trova delle facce, detected face avrà le info relative a quei volti. Detected face viene impiegato nello scipt Controller
-			controller.detectedFaces = processor.Faces; 
-        }
+			int scene = SceneManager.GetActiveScene().buildIndex;
+			if(scene == 2)
+            {
+				controller = sceneController.GetComponent<Controller>();    //ogni volta che trova delle facce, detected face avrà le info relative a quei volti. Detected face viene impiegato nello scipt Controller
+				controller.detectedFaces = processor.Faces;
+			} else if(scene == 3)
+            {
+				soffio = sceneController.GetComponent<soffio>();
+				soffio.detectedFaces = processor.Faces;
+            }
+			else if (scene == 4)
+			{
+				eater = sceneController.GetComponent<eating>();
+				eater.detectedFaces = processor.Faces;
+			}
+			else if (scene == 5)
+			{
+				gelato = sceneController.GetComponent<gelato>();
+				gelato.detectedFaces = processor.Faces;
+			}
+
+		}
 
 
 		// processor.Image now holds data we'd like to visualize
@@ -103,4 +125,5 @@ public class FaceDetector : MyWebCamera
 
 		return true;
 	}
+
 }

@@ -88,12 +88,12 @@ public class soffio : MonoBehaviour
                     }
 
 
-		if (Input.GetKeyDown("space"))
-                    {
-                        barca01.transform.position = barca01.transform.position + new Vector3(100, 0, 0);
-                    }
+		//if (Input.GetKeyDown("space"))
+  //                  {
+  //                      barca01.transform.position = barca01.transform.position + new Vector3(100, 0, 0);
+  //                  }
 
-            /*foreach (DetectedFace f in detectedFaces)
+            foreach (DetectedFace f in detectedFaces)
             {
 
 
@@ -126,7 +126,7 @@ public class soffio : MonoBehaviour
 
                     soglia = ((d06 - dist06rest) / dist06rest) * 100;
 
-                    if (soglia<-10)
+                    if (soglia < -10)
                     {
                         barca01.transform.position = barca01.transform.position + new Vector3(100, 0, 0);
                     }
@@ -137,7 +137,7 @@ public class soffio : MonoBehaviour
 
                 }
 
-            }*/
+            }
         }
         else
         {

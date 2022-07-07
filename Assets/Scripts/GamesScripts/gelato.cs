@@ -69,27 +69,27 @@ public class gelato : MonoBehaviour
       if (timeLeft > 0 & n<3)
        {
 
-	    if (Input.GetKeyDown("space")){
-			if (n == 0)
-                        {
-                            gelati[n].transform.position = cono.transform.position + new Vector3(0, 150, 0);
-                            n = n + 1;
-                        }
-                        else if (n == 1)
-                        {
-                            gelati[n].transform.position = cono.transform.position + new Vector3(0, 220, 0);
-                            n = n + 1;
-                        }
-                        else if (n == 2)
-                        {
-                            gelati[n].transform.position = cono.transform.position + new Vector3(0, 320, 0);
-                            n = n + 1;
-                        }
-	     }
+	  //  if (Input.GetKeyDown("space")){
+			//if (n == 0)
+   //                     {
+   //                         gelati[n].transform.position = cono.transform.position + new Vector3(0, 150, 0);
+   //                         n = n + 1;
+   //                     }
+   //                     else if (n == 1)
+   //                     {
+   //                         gelati[n].transform.position = cono.transform.position + new Vector3(0, 220, 0);
+   //                         n = n + 1;
+   //                     }
+   //                     else if (n == 2)
+   //                     {
+   //                         gelati[n].transform.position = cono.transform.position + new Vector3(0, 320, 0);
+   //                         n = n + 1;
+   //                     }
+	  //   }
 
 
 
-            /*foreach (DetectedFace f in detectedFaces)
+            foreach (DetectedFace f in detectedFaces)
             {
 
 
@@ -147,7 +147,7 @@ public class gelato : MonoBehaviour
 
                 }
 
-            }*/
+            }
 
 
         }

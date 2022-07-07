@@ -72,15 +72,15 @@ public class eating : MonoBehaviour
         if (timeLeft > 0 & nCiambelle < 7)
         {
             
-		if (Input.GetKeyDown("space"))
-                    {
-                        donuteater.transform.position = ciambelle[nCiambelle].transform.position;
-                        ciambelle[nCiambelle].active = false;
-                        nCiambelle = nCiambelle + 1;
-                    }
+		//if (Input.GetKeyDown("space"))
+  //                  {
+  //                      donuteater.transform.position = ciambelle[nCiambelle].transform.position;
+  //                      ciambelle[nCiambelle].active = false;
+  //                      nCiambelle = nCiambelle + 1;
+  //                  }
 
 
-	    /*foreach (DetectedFace f in detectedFaces)
+            foreach (DetectedFace f in detectedFaces)
             {
                 //0 - Jaw; 1-2 Eyebrow; 3 nosebridge; 4 nose; 5-6 Eyes; 7-8 Lips : questi sono gli elementi che è in grado di risconoscere
                 // if (f.Elements[5].Marks !=null)
@@ -113,7 +113,7 @@ public class eating : MonoBehaviour
 
                     soglia = ((d39 - dist39rest) / dist39rest) * 100;
 
-                    if (soglia>110)
+                    if (soglia > 110)
                     {
                         donuteater.transform.position = ciambelle[nCiambelle].transform.position;
                         ciambelle[nCiambelle].active = false;
@@ -124,11 +124,11 @@ public class eating : MonoBehaviour
                     //img = new Mat(img, s);
                     roiTexture.texture = OpenCvSharp.Unity.MatToTexture(img);
 
-                }           
+                }
 
-                
 
-            }*/
+
+            }
         }
         else
         {

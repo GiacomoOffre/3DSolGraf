@@ -7,6 +7,7 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
+    public GameObject playerPointer;
 
     // Update is called once per frame
     void Update()
@@ -31,6 +32,7 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = false;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        playerPointer.SetActive(true);
     }
     void Pause()
     {        
@@ -39,6 +41,7 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = true;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        playerPointer.SetActive(false);
     }
 
     public void LoadMenu()

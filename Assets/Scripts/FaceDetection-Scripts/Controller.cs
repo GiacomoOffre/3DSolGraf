@@ -27,7 +27,7 @@ public class Controller : MonoBehaviour
     public TextMeshProUGUI textSopra;
     public TextMeshProUGUI textSotto;
 
-    public int miniGioco = 1; //può essere 1 2 o 3
+    public int miniGioco = 2; //può essere 1 2 o 3
 
     public List<DetectedFace> detectedFaces; //si vuole che nello script FaceDetector (nella parte di "Inserire qui"), vada a mandare in controller tutte le info relative ai volti 
     // Start is called before the first frame update

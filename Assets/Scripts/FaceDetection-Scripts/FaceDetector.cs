@@ -43,8 +43,7 @@ public class FaceDetector : MyWebCamera
 #else
             UnityEngine.Debug.Log(errorMessage);
 #endif
-
-            
+ 
 
 
         }

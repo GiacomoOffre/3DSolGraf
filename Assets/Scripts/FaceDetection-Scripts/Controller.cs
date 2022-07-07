@@ -27,12 +27,13 @@ public class Controller : MonoBehaviour
     public TextMeshProUGUI textSopra;
     public TextMeshProUGUI textSotto;
 
-    public int miniGioco = 2; //può essere 1 2 o 3
+    static public int miniGioco = 0; //può essere 4 5 o 3
 
     public List<DetectedFace> detectedFaces; //si vuole che nello script FaceDetector (nella parte di "Inserire qui"), vada a mandare in controller tutte le info relative ai volti 
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.lockState = CursorLockMode.None;
         detectedFaces = new List<DetectedFace>(); 
     }
 
@@ -114,6 +115,8 @@ public class Controller : MonoBehaviour
             textSopra.gameObject.SetActive(false);
             textSotto.gameObject.SetActive(false);
             ok.SetActive(true);
+            
+
         }
     }
 
@@ -199,7 +202,7 @@ public class Controller : MonoBehaviour
 
     public void next()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + miniGioco);
+        SceneManager.LoadScene(miniGioco);
     }
 
 }

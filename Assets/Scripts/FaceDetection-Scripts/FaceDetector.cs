@@ -24,6 +24,20 @@ public class FaceDetector : MyWebCamera
 	/// </summary>
 	protected override void Awake()
 	{
+		if (webCamTexture != null)
+		{
+			if (webCamTexture.isPlaying)
+			{
+				webCamTexture.Stop();
+			}
+			webCamTexture = null;
+		}
+
+		if (webCamDevice != null)
+		{
+			webCamDevice = null;
+		}
+
 		base.Awake();
 		base.forceFrontalCamera = true; // we work with frontal cams here, let's force it for macOS s MacBook doesn't state frontal cam correctly
 
@@ -60,7 +74,6 @@ public class FaceDetector : MyWebCamera
 		processor.Performance.Downscale = 256;          // processed image is pre-scaled down to N px by long side
 		processor.Performance.SkipRate = 0;             // we actually process only each Nth frame (and every frame for skipRate = 0)
 	}
-
 
 	/// <summary>
 	/// Per-frame video capture processor

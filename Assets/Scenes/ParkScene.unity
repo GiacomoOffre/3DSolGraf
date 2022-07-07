@@ -602,8 +602,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 809869592}
-  - component: {fileID: 809869594}
-  - component: {fileID: 809869593}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -625,47 +623,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &809869593
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 809869590}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddba97ddaedd80345af68d09f955babf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camTexture: {fileID: 626118588}
-  roiTexture: {fileID: 1231235032}
-  ok: {fileID: 0}
-  d06: 0
-  d39: 0
-  distRelrest: 0
-  movimento: nulla
-  timer: {fileID: 0}
-  textSopra: {fileID: 0}
-  textSotto: {fileID: 0}
---- !u!114 &809869594
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 809869590}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f99ed39479b001e498be2eda07d41cbc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Surface: {fileID: 626118586}
-  forceDevice: 1
-  deviceNumber: 0
-  faces: {fileID: 4900000, guid: 01988adf0b53c244b826e291727ff88b, type: 3}
-  eyes: {fileID: 4900000, guid: 33aa7eb57bb854f43b42b1bc1608ba70, type: 3}
-  shapes: {fileID: 4900000, guid: 077455dc95a136649b83e23c650dd7a0, type: 3}
-  sceneController: {fileID: 809869590}
 --- !u!1 &915114917
 GameObject:
   m_ObjectHideFlags: 0
@@ -2459,7 +2416,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b51cb9fd87920ff4e86d129fccdb83c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 1060807061}
 --- !u!4 &1775082186 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ec203b373fde90c418465d0aa7bbb2d1, type: 3}

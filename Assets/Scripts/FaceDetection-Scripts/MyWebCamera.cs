@@ -16,9 +16,9 @@ public abstract class MyWebCamera : MonoBehaviour
     public bool forceDevice = false; // da usare se per qualsiasi ragione la ricerca automatica del device WebCam fallisce
     public int deviceNumber = 0;     //per indicare il numero del device da usare, in caso forceDevice == True
 
-    private Nullable<WebCamDevice> webCamDevice = null;
-    private WebCamTexture webCamTexture = null;
-    private Texture2D renderedTexture = null;
+    public Nullable<WebCamDevice> webCamDevice = null;
+    public WebCamTexture webCamTexture = null;
+    public Texture2D renderedTexture = null;
 
     /// <summary>
     /// A kind of workaround for macOS issue: MacBook doesn't state it's webcam as frontal

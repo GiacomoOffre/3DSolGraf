@@ -13,7 +13,7 @@ public class soffio : MonoBehaviour
     public GameObject barca01;
     public GameObject barca02;
 
-    public bool Ready = false;
+    public bool gameStarted = false;
 
     private bool ready = true;
 
@@ -70,7 +70,7 @@ public class soffio : MonoBehaviour
         if (barca01.transform.position.x<1200 && timeLeft > 0) 
         {
 		
-	    if (barcaVeloce == true && Ready == true)
+	    if (barcaVeloce == true && gameStarted == true)
                     {
                         barca00.transform.position = barca00.transform.position + new Vector3((float)0.25, 0, 0); //0.3
                         barca02.transform.position = barca02.transform.position + new Vector3((float)0.1, 0, 0); //0.1
@@ -80,7 +80,7 @@ public class soffio : MonoBehaviour
                             win = false;
                         }
                     }
-                    else if (barcaVeloce == false && Ready == true)
+                    else if (barcaVeloce == false && gameStarted == true)
                     {
                         barca00.transform.position = barca00.transform.position + new Vector3((float)0.1, 0, 0); //0.1
                         barca02.transform.position = barca02.transform.position + new Vector3((float)0.25, 0, 0); //0.3
@@ -197,7 +197,7 @@ public class soffio : MonoBehaviour
     {
         schermataIniziale.SetActive(false);
         gioca.gameObject.SetActive(false);
-        Ready = true;
+        gameStarted = true;
     }
 
     double calcolaDist(Point p1, Point p2)

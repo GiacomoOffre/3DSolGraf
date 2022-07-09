@@ -131,7 +131,7 @@ public class soffio : MonoBehaviour
 
                     soglia = ((d06 - dist06rest) / dist06rest) * 100;
 
-                    if (soglia < -10 && ready==true)
+                    if (soglia < -17 && ready==true)
                     {
                         barca01.transform.position = barca01.transform.position + new Vector3(100, 0, 0);
                         ready = false;

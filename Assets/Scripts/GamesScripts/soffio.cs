@@ -13,6 +13,8 @@ public class soffio : MonoBehaviour
     public GameObject barca01;
     public GameObject barca02;
 
+    public bool Ready = false;
+
     public GameObject schermataFinale;
     public Image vittoria;
     public Image sconfitta;
@@ -38,7 +40,7 @@ public class soffio : MonoBehaviour
 
     public TextMeshProUGUI timer;
 
-    float timeLeft = 32.0f;
+    float timeLeft = 40.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -63,10 +65,10 @@ public class soffio : MonoBehaviour
         float seconds = Mathf.FloorToInt(timeLeft % 60);
         timer.text = string.Format("{0:00} sec", seconds);
 
-        if (barca01.transform.position.x<1200) 
+        if (barca01.transform.position.x<1200 && timeLeft > 0) 
         {
 		
-	    if (barcaVeloce == true)
+	    if (barcaVeloce == true && Ready == true)
                     {
                         barca00.transform.position = barca00.transform.position + new Vector3((float)0.7, 0, 0); //0.3
                         barca02.transform.position = barca02.transform.position + new Vector3((float)0.2, 0, 0); //0.1
@@ -76,7 +78,7 @@ public class soffio : MonoBehaviour
                             win = false;
                         }
                     }
-                    else
+                    else if (barcaVeloce == false && Ready == true)
                     {
                         barca00.transform.position = barca00.transform.position + new Vector3((float)0.2, 0, 0); //0.1
                         barca02.transform.position = barca02.transform.position + new Vector3((float)0.7, 0, 0); //0.3
@@ -126,7 +128,7 @@ public class soffio : MonoBehaviour
 
                     soglia = ((d06 - dist06rest) / dist06rest) * 100;
 
-                    if (soglia < -20)
+                    if (soglia < -10)
                     {
                         barca01.transform.position = barca01.transform.position + new Vector3(100, 0, 0);
                     }
@@ -185,6 +187,7 @@ public class soffio : MonoBehaviour
     {
         schermataIniziale.SetActive(false);
         gioca.gameObject.SetActive(false);
+        Ready = true;
     }
 
     double calcolaDist(Point p1, Point p2)

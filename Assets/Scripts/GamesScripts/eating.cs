@@ -47,6 +47,8 @@ public class eating : MonoBehaviour
     public RawImage camTexture;
     public RawImage roiTexture;
 
+    private bool ready = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -113,11 +115,13 @@ public class eating : MonoBehaviour
 
                     soglia = ((d39 - dist39rest) / dist39rest) * 100;
 
-                    if (soglia > 110)
+                    if (soglia > 110 && ready==true)
                     {
                         donuteater.transform.position = ciambelle[nCiambelle].transform.position;
                         ciambelle[nCiambelle].active = false;
                         nCiambelle = nCiambelle + 1;
+                        ready = false;
+                        StartCoroutine("waitGame");
                     }
 
                     img = new Mat(img, r);
@@ -157,6 +161,12 @@ public class eating : MonoBehaviour
         vittoria.gameObject.SetActive(true);
         camTexture.gameObject.SetActive(false);
         roiTexture.gameObject.SetActive(false);
+    }
+
+    IEnumerator waitGame()
+    {
+        yield return new WaitForSeconds(1);
+        ready = true;
     }
 
     public void MainGame()

@@ -45,6 +45,8 @@ public class gelato : MonoBehaviour
     public RawImage camTexture;
     public RawImage roiTexture;
 
+    private bool ready = true;
+
 
     // Start is called before the first frame update
     void Start()
@@ -122,7 +124,7 @@ public class gelato : MonoBehaviour
 
                     soglia = ((d06 - dist06rest) / dist06rest) * 100;
 
-                    if (soglia > 22)
+                    if (soglia > 22 && ready==true)
                     {
                         if (n == 0)
                         {
@@ -139,6 +141,8 @@ public class gelato : MonoBehaviour
                             gelati[n].transform.position = cono.transform.position + new Vector3(0, 440, 0);
                             n = n + 1;
                         }
+                        ready = false;
+                        StartCoroutine("waitGame");
                     }
 
                     img = new Mat(img, r);
@@ -178,6 +182,12 @@ public class gelato : MonoBehaviour
         vittoria.gameObject.SetActive(true);
         camTexture.gameObject.SetActive(false);
         roiTexture.gameObject.SetActive(false);
+    }
+
+    IEnumerator waitGame()
+    {
+        yield return new WaitForSeconds(1);
+        ready = true;
     }
 
     public void MainGame()

@@ -58,6 +58,7 @@ public class soffio : MonoBehaviour
         }
 
         detectedFaces = new List<DetectedFace>();
+        Cursor.lockState = CursorLockMode.None;
     }
 
     // Update is called once per frame

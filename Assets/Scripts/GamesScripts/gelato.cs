@@ -58,7 +58,7 @@ public class gelato : MonoBehaviour
         gelati[2] = cioccolato;
 
         detectedFaces = new List<DetectedFace>();
-        
+        Cursor.lockState = CursorLockMode.None;
     }
 
 

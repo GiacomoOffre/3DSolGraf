@@ -62,6 +62,7 @@ public class eating : MonoBehaviour
         ciambelle[6] = ciambella00;
 
         detectedFaces = new List<DetectedFace>();
+        Cursor.lockState = CursorLockMode.None;
     }
 
     // Update is called once per frame

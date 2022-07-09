@@ -1019,8 +1019,8 @@ MonoBehaviour:
   interactableLayerMask:
     serializedVersion: 2
     m_Bits: 256
-  pointer: {fileID: 1887107840}
-  pointerRed: {fileID: 1124717490}
+  interactPointer: {fileID: 1124717490}
+  defaultPointer: {fileID: 1887107840}
 --- !u!1001 &1081538870
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1111,7 +1111,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1124717491
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1144,14 +1144,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9137255, g: 0.109803915, b: 0.2478752, a: 1}
+  m_Color: {r: 0.9137255, g: 0.6903918, b: 0.109803915, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c3f7f32ab2d817548b074bace760e054, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f9c8c61932472da4291e5ea6f2979115, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

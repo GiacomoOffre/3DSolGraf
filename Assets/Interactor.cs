@@ -14,8 +14,10 @@ public class Interactor : MonoBehaviour
     Controller controller;
     int nGioco = 0;
 
-    public GameObject pointer;
-    public GameObject pointerRed;
+    public GameObject interactPointer;
+    public GameObject defaultPointer;
+
+    //public Interactable interactable;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +36,15 @@ public class Interactor : MonoBehaviour
 
             if (hit.collider.GetComponent<Interactable>() != false)
             {
+
+                //if(interactable==null || interactable.ID != hit.collider.GetComponent<Interactable>().ID)
+                //{
+                //    interactable = hit.collider.GetComponent<Interactable>();
+                //    Debug.Log("new interactable");
+                //}
+
+                interactPointer.SetActive(true);
+                defaultPointer.SetActive(false);
                 
                 onInteract = hit.collider.GetComponent<Interactable>().onInteract;
                 if (Input.GetMouseButtonDown(0))
@@ -54,8 +65,14 @@ public class Interactor : MonoBehaviour
                     Controller.miniGioco = nGioco;
                 }
             }
+            
+        }
+        else
+        {
+            interactPointer.SetActive(false);
+            defaultPointer.SetActive(true);
         }
 
-        
+
     }
 }

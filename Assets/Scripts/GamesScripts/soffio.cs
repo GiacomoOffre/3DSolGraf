@@ -15,6 +15,8 @@ public class soffio : MonoBehaviour
 
     public bool Ready = false;
 
+    private bool ready = true;
+
     public GameObject schermataFinale;
     public Image vittoria;
     public Image sconfitta;
@@ -70,8 +72,8 @@ public class soffio : MonoBehaviour
 		
 	    if (barcaVeloce == true && Ready == true)
                     {
-                        barca00.transform.position = barca00.transform.position + new Vector3((float)0.7, 0, 0); //0.3
-                        barca02.transform.position = barca02.transform.position + new Vector3((float)0.2, 0, 0); //0.1
+                        barca00.transform.position = barca00.transform.position + new Vector3((float)0.25, 0, 0); //0.3
+                        barca02.transform.position = barca02.transform.position + new Vector3((float)0.1, 0, 0); //0.1
 
                         if (barca00.transform.position.x > 1200) //== 1800
                         {
@@ -80,8 +82,8 @@ public class soffio : MonoBehaviour
                     }
                     else if (barcaVeloce == false && Ready == true)
                     {
-                        barca00.transform.position = barca00.transform.position + new Vector3((float)0.2, 0, 0); //0.1
-                        barca02.transform.position = barca02.transform.position + new Vector3((float)0.7, 0, 0); //0.3
+                        barca00.transform.position = barca00.transform.position + new Vector3((float)0.1, 0, 0); //0.1
+                        barca02.transform.position = barca02.transform.position + new Vector3((float)0.25, 0, 0); //0.3
 
                         if (barca02.transform.position.x > 1200) //== 1800
                         {
@@ -128,9 +130,11 @@ public class soffio : MonoBehaviour
 
                     soglia = ((d06 - dist06rest) / dist06rest) * 100;
 
-                    if (soglia < -10)
+                    if (soglia < -10 && ready==true)
                     {
                         barca01.transform.position = barca01.transform.position + new Vector3(100, 0, 0);
+                        ready = false;
+                        StartCoroutine("waitGame");
                     }
 
                     img = new Mat(img, r);
@@ -171,6 +175,12 @@ public class soffio : MonoBehaviour
         camTexture.gameObject.SetActive(false);
         roiTexture.gameObject.SetActive(false);
         //timer.gameObject.SetActive(false);
+    }
+
+    IEnumerator waitGame()
+    {
+        yield return new WaitForSeconds(1);
+        ready = true;
     }
 
     public void MainGame()

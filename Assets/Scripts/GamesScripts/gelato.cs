@@ -128,17 +128,17 @@ public class gelato : MonoBehaviour
                     {
                         if (n == 0)
                         {
-                            gelati[n].transform.position = cono.transform.position + new Vector3(0, 120, 0);
+                            gelati[n].transform.position = cono.transform.position + new Vector3(0, 170, 0);
                             n = n + 1;
                         }
                         else if (n == 1)
                         {
-                            gelati[n].transform.position = cono.transform.position + new Vector3(0, 180, 0);
+                            gelati[n].transform.position = cono.transform.position + new Vector3(0, 230, 0);
                             n = n + 1;
                         }
                         else if (n == 2)
                         {
-                            gelati[n].transform.position = cono.transform.position + new Vector3(0, 260, 0);
+                            gelati[n].transform.position = cono.transform.position + new Vector3(0, 310, 0);
                             n = n + 1;
                         }
                         ready = false;

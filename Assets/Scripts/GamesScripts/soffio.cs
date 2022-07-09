@@ -68,25 +68,25 @@ public class soffio : MonoBehaviour
         float seconds = Mathf.FloorToInt(timeLeft % 60);
         timer.text = string.Format("{0:00} sec", seconds);
 
-        if (barca01.transform.position.x<1200 && timeLeft > 0) 
+        if (barca01.transform.position.x<1800 && timeLeft > 0) 
         {
 		
 	    if (barcaVeloce == true && gameStarted == true)
                     {
-                        barca00.transform.position = barca00.transform.position + new Vector3((float)0.25, 0, 0); //0.3
-                        barca02.transform.position = barca02.transform.position + new Vector3((float)0.1, 0, 0); //0.1
+                        barca00.transform.position = barca00.transform.position + new Vector3((float)0.4, 0, 0); //0.3
+                        barca02.transform.position = barca02.transform.position + new Vector3((float)0.2, 0, 0); //0.1
 
-                        if (barca00.transform.position.x > 1200) //== 1800
+                        if (barca00.transform.position.x > 1800) //== 1800
                         {
                             win = false;
                         }
                     }
                     else if (barcaVeloce == false && gameStarted == true)
                     {
-                        barca00.transform.position = barca00.transform.position + new Vector3((float)0.1, 0, 0); //0.1
-                        barca02.transform.position = barca02.transform.position + new Vector3((float)0.25, 0, 0); //0.3
+                        barca00.transform.position = barca00.transform.position + new Vector3((float)0.2, 0, 0); //0.1
+                        barca02.transform.position = barca02.transform.position + new Vector3((float)0.4, 0, 0); //0.3
 
-                        if (barca02.transform.position.x > 1200) //== 1800
+                        if (barca02.transform.position.x > 1800) //== 1800
                         {
                             win = false;
                         }
